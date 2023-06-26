@@ -1,0 +1,43 @@
+.qa {
+    padding: 24px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main {
+    margin-left: 32px;
+    margin-right: 32px;
+    padding: 24px;
+    color: #1B1F23;
+}
+
+.header {
+    padding: 24px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.answer {
+    margin-top: 16px;
+}
+
+.arrow {
+    border-style: none;
+}
+
+.arrow:hover {
+    opacity: 0.5;
+}
+
+.arrowBack {
+    transform: scale(1, -1);
+}

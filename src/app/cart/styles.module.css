@@ -1,0 +1,25 @@
+.list {
+    margin: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.empty {
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total {
+    flex-shrink: 0;
+    display: flex;
+    border-radius: 8px;
+    justify-content: space-between;
+    padding: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}
