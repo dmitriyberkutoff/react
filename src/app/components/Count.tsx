@@ -49,7 +49,8 @@ export const Count = ({id, del}: { id: any, del: boolean }) => {
                             <button className={styles.yesBtn} onClick={() => {
                                 setIsModalOpen(false);
                                 dispatch(cartActions.reset(id))
-                            }}>Да</button>
+                            }}>Да
+                            </button>
                             <button className={styles.noBtn} onClick={() => setIsModalOpen(false)}>Нет</button>
                         </div>
                     </div>

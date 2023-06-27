@@ -1,5 +1,4 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {useGetMoviesQuery} from "../services/movieApi";
 
 const initialState = {
     added: {},
@@ -39,11 +38,6 @@ const cartSlice = createSlice({
             delete state[payload];
             delete state["added"][payload];
         },
-        download: (state) => {
-            const {data, isLoading} = useGetMoviesQuery();
-            if (isLoading) state["films"] = "loading";
-            else state["films"] = data;
-        }
     },
 });
 
