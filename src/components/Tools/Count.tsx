@@ -6,7 +6,7 @@ import close from "../../images/close.svg"
 import plus from "../../images/plus.svg"
 import minus from "../../images/minus.svg"
 import React, {useState} from "react";
-import styles from "./styles.module.css"
+import styles from "../styles.module.css"
 import classNames from "classnames";
 import {useDispatch, useSelector} from "react-redux";
 import {cartActions} from "@/redux/cart";
@@ -25,7 +25,7 @@ export const useTotalCounter = () => {
 export const TotalCounter = () => {
     const amount = useTotalCounter();
     if (!amount) return <></>
-    return <div className={"total"}>{amount}</div>;
+    return <div className={styles.total}>{amount}</div>;
 }
 
 export const Count = ({id, del}: { id: any, del: boolean }) => {
@@ -59,14 +59,16 @@ export const Count = ({id, del}: { id: any, del: boolean }) => {
             <button className={classNames(styles.button, amount > 0 ? styles.active : "")} onClick={() => {
                 if (amount === 1 && del) setIsModalOpen(true);
                 else dispatch(cartActions.decrement(id))
-            }}><Image src={minus} alt={"Remove"}/></button>
+            }}>
+                <Image src={minus} alt={"Remove"}/>
+            </button>
 
             <div className={styles.counter}><Product id={id}/></div>
 
             <button className={classNames(styles.button, amount < 30 ? styles.active : "")}
                     onClick={() => dispatch(cartActions.increment(id))}><Image src={plus} alt={"Add"}/></button>
-            {del && <button className={styles.delete} onClick={() => setIsModalOpen(true)}><Image src={close}
-                                                                                                  alt={"delete"}/>
+            {del && <button className={styles.delete} onClick={() => setIsModalOpen(true)}>
+                <Image src={close} alt={"delete"}/>
             </button>}
         </div>
     )

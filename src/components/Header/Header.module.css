@@ -1,0 +1,27 @@
+.cartImage {
+    width: 32px;
+    height: 32px;
+    filter: invert(100%) sepia(4%) saturate(16%) hue-rotate(10deg) brightness(103%) contrast(103%);
+}
+
+.cartIco {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.header {
+    display: flex;
+    z-index: 1;
+    width: 100%;
+    padding: 24px 32px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+}

@@ -1,6 +1,6 @@
 'use client'
 
-import styles from '../questions/styles.module.css'
+import styles from '../../app/questions/styles.module.css'
 import {useCallback, useState} from "react";
 import classNames from 'classnames';
 import arrow from '../../images/arrow.svg'

@@ -1,12 +1,8 @@
-import {inspect} from "util";
-import styles from "./styles.module.css"
-import {Roboto} from "next/font/google";
-import classNames from "classnames";
-import {Count} from "@/app/components/Count";
+import styles from "./FilmCard.module.css"
+import {Count} from "@/components/Tools/Count";
 import Link from "next/link";
-import {useGetMovieQuery, useGetMoviesQuery} from "@/redux/services/movieApi";
-import Image from "next/image";
-import {SmartImage} from "@/app/components/SmartImage";
+import {useGetMovieQuery} from "@/redux/services/movieApi";
+import {SmartImage} from "@/components/Tools/SmartImage";
 
 export const FilmCardForId = ({id}: { id: any }) => {
     const {data, isLoading} = useGetMovieQuery(id);
@@ -29,11 +25,13 @@ export const FilmCard = ({
                              del
                          }: { id: any, title: any, genre: string, image: any, del: boolean }) => {
     return <div className={styles.filmCard}>
-        <SmartImage className={styles.filmCardImage}
-                    src={image}
-                    width={100}
-                    height={120}
-        />
+        <Link className={styles.title} href={"/films/" + id}>
+            <SmartImage className={styles.filmCardImage}
+                        src={image}
+                        width={100}
+                        height={120}
+            />
+        </Link>
         <div className={styles.info}>
             <Link className={styles.title} href={"/films/" + id}>{title}</Link>
             <p className={styles.genre}>{translation[genre]}</p>

@@ -1,0 +1,84 @@
+.menu {
+    position: fixed;
+    top: 110px;
+    display: inline-flex;
+    width: 408px;
+    height: 862px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.menuTitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.nameFilterText {
+    display: flex;
+    padding: 10px 16px 10px 16px;
+    align-items: center;
+    color: #999FA6;
+    border-radius: 8px;
+    border: 1px solid #E1E3E6;
+}
+
+.namedSelector {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+}
+
+.selector {
+    display: flex;
+    padding: 10px 16px 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E1E3E6;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.selectorBtn {
+    width: 100%;
+    border: none;
+    display: flex;
+    color: #999FA6;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selectorBtn:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.selectorList {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: #FFFFFF;
+}
+
+.listItem {
+    display: flex;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+.listItem:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.up {
+    transform: scale(1, -1);
+}

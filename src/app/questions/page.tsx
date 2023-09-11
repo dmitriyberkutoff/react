@@ -1,6 +1,6 @@
 'use client'
 
-import {QandA} from "@/app/components/QandA";
+import {QandA} from "@/components/QandA/QandA";
 import styles from './styles.module.css'
 
 export default function Page() {

@@ -1,8 +1,8 @@
 import {useSelector} from "react-redux";
 import {selectAddedFilms} from "@/redux/cart/selector";
-import {useTotalCounter} from "@/app/components/Count";
-import styles from "@/app/cart/styles.module.css";
-import {FilmCardForId} from "@/app/components/FilmCard";
+import {useTotalCounter} from "@/components/Tools/Count";
+import styles from "./AddedFilms.module.css";
+import {FilmCardForId} from "@/components/FilmCard/FilmCard";
 
 export const AddedFilms = () => {
     const cart = useSelector((state) => selectAddedFilms(state));

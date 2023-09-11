@@ -1,38 +1,20 @@
-.filmCard {
-    display: flex;
-    padding: 24px;
-    border-radius: 8px;
-    gap: 24px;
-}
-
-.filmCardImage {
-    width: 100px;
-    height: 120px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.info {
-    margin-left: 24px;
-    margin-right: 24px;
-    flex-grow: 1;
-    color: #1B1F23;
-    line-height: 20px;
-}
-
-.title {
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.genre {
-    font-size: 16px;
-    font-style: italic;
-}
-
 .counter {
     margin-left: 8px;
     margin-right: 8px;
+}
+
+.total {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    background-color: #FF5500;
 }
 
 .adder {

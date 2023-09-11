@@ -1,13 +1,9 @@
 'use client'
 
 import './globals.css'
-import Link from "next/link";
-import basket from '../images/basket.svg'
 import {Roboto} from 'next/font/google'
-import {TotalCounter} from "@/app/components/Count";
-import Image from "next/image";
-import {Provider} from "react-redux";
-import {store} from "@/redux/store";
+import {Header} from "@/components/Header/Header";
+import {Footer} from "@/components/Footer/Footer";
 
 const roboto = Roboto({
     weight: ['100', '300', '400', '500', '700'],
@@ -24,20 +20,9 @@ export default function RootLayout({
         <html lang="en">
         <body className={roboto.className}>
         <div id={"portals"}></div>
-        <header>
-            <Link href={"/"}>Билетопоиск</Link>
-            <div className={'cartIco'}>
-                <Provider store={store}><TotalCounter/></Provider>
-                <Link href={"/cart"} className={"cartImage"}><Image src={basket} alt={"Корзина"}/></Link>
-            </div>
-        </header>
-        <main>
-            {children}
-        </main>
-        <footer>
-            <Link href={"/questions"}>Вопросы и ответы</Link>
-            <Link href={"/aboutUs"}>О нас</Link>
-        </footer>
+            <Header/>
+            <main>{children}</main>
+            <Footer/>
         </body>
         </html>
     )

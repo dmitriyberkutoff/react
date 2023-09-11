@@ -1,8 +1,7 @@
 import {useGetMovieQuery} from "@/redux/services/movieApi";
-import styles from "@/app/films/styles.module.css";
-import {Count} from "@/app/components/Count";
-import {translation} from "@/app/components/FilmCard";
-import {SmartImage} from "@/app/components/SmartImage";
+import styles from "./Info.module.css";
+import {Count} from "@/components/Tools/Count";
+import {translation} from "@/components/FilmCard/FilmCard";
 import Image from "next/image";
 
 export const Info = ({movieId}: { movieId: any }) => {
